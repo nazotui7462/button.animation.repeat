@@ -8,11 +8,17 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
+    @IBOutlet weak var button: UIButton!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        UIView.animate(withDuration: 1.0, delay: 0.0, options: [.repeat], animations: {
+            self.button.frame.origin.x -= 50.0
+        }, completion: nil)
     }
 
 
